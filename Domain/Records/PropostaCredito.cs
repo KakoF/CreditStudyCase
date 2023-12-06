@@ -2,7 +2,7 @@
 
 namespace Domain.Records
 {
-    public record PropostaCredito(eTipoCredito TipoCredito, decimal ValorCredito, int QuantidadeParcelas, DateTime DataPrimeiroVencimento)
+    public record PropostaCredito(string Cpf, string Nome, string UF, string Celular, eTipoCredito TipoCredito, decimal ValorCredito, int QuantidadeParcelas, DateTime DataPrimeiroVencimento)
     {
     }
 }

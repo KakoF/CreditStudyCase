@@ -2,6 +2,13 @@
 {
     public class BaseEntity
     {
-        public int Id { get; set; }
+        public BaseEntity(long id)
+        {
+            Id = id;
+        }
+        public BaseEntity()
+        {
+        }
+        public long Id { get; }
     }
 }

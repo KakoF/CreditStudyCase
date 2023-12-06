@@ -1,13 +1,29 @@
 ﻿
+using Domain.Enums;
+
 namespace Domain.Entities
 {
     public class FinanciamentoEntity : BaseEntity
     {
+        public FinanciamentoEntity(long id, eTipoCredito tipoFinanciamento, decimal valorTotal, DateTime dataUltimoVencimento, long clienteId): base(id)
+        {
+            TipoFinanciamento = tipoFinanciamento;
+            ValorTotal = valorTotal;
+            DataUltimoVencimento = dataUltimoVencimento;
+            ClienteId = clienteId;
+        }
 
-        public int MyProperty { get; set; }
-        public int TipoFinanciamento { get; set; }
-        public decimal ValorTotal { get; set; }
-        public DateTime DataUltimoVencimento { get; set; }
-        public int ClienteId { get; set; }
+        public FinanciamentoEntity(eTipoCredito tipoFinanciamento, decimal valorTotal, DateTime dataUltimoVencimento, long clienteId)
+        {
+            TipoFinanciamento = tipoFinanciamento;
+            ValorTotal = valorTotal;
+            DataUltimoVencimento = dataUltimoVencimento;
+            ClienteId = clienteId;
+        }
+
+        public eTipoCredito TipoFinanciamento { get; }
+        public decimal ValorTotal { get; }
+        public DateTime DataUltimoVencimento { get; }
+        public long ClienteId { get; }
     }
 }
