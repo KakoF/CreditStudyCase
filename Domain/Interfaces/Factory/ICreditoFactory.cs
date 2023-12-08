@@ -5,6 +5,6 @@ namespace Domain.Interfaces.Factory
 {
     public interface ICreditoFactory
     {
-        CreditoAbstract Factory(PropostaCredito credito);
+        CreditoAbstract Create(PropostaCredito credito);
     }
 }

@@ -8,7 +8,7 @@ namespace Domain.Factory
 {
     public class CreditoFactory : ICreditoFactory
     {
-        public CreditoAbstract Factory(PropostaCredito credito)
+        public CreditoAbstract Create(PropostaCredito credito)
         {
             switch (credito.TipoCredito)
             {
