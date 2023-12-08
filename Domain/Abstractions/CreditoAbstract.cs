@@ -6,14 +6,23 @@ namespace Domain.Abstractions
 {
     public abstract class CreditoAbstract : IValidarCredito
     {
+
         protected abstract int Taxa { get; }
+        public string Cpf { get; } 
+        public string Nome { get; } 
+        public string Celular { get; }
+        public string UF { get; }
         public eTipoCredito TipoCredito { get; }
         public decimal ValorCredito { get; set; }
         public int QuantidadeParcelas { get; set; }
         public DateTime DataPrimeiroVencimento { get; set; }
 
-        protected CreditoAbstract(eTipoCredito tipoCredito, decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento)
+        protected CreditoAbstract(string cpf, string nome, string celular, string uf, eTipoCredito tipoCredito, decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento)
         {
+            Cpf = cpf;
+            Nome = nome;
+            Celular = celular;
+            UF = uf;
             TipoCredito = tipoCredito;
             ValorCredito = valorCredito;
             QuantidadeParcelas = quantidadeParcelas;

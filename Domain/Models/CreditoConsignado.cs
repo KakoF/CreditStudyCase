@@ -7,7 +7,7 @@ namespace Domain.Models
     {
         protected override int Taxa => 1;
 
-        public CreditoConsignado(decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento) : base(eTipoCredito.Consignado, valorCredito, quantidadeParcelas, dataPrimeiroVencimento)
+        public CreditoConsignado(string cpf, string nome, string celular, string uf, decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento) : base(cpf, nome, celular, uf, eTipoCredito.Consignado, valorCredito, quantidadeParcelas, dataPrimeiroVencimento)
         {
         }
        

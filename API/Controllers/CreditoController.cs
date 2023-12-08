@@ -1,4 +1,3 @@
-using Domain.Abstractions;
 using Domain.Interfaces.Service;
 using Domain.Records;
 using Microsoft.AspNetCore.Mvc;
@@ -9,8 +8,8 @@ namespace API.Controllers
     [Route("[controller]")]
     public class CreditoController : ControllerBase
     {
-        private readonly ICreditoService _service;
-        public CreditoController(ICreditoService service)
+        private readonly ILiberarCreditoService _service;
+        public CreditoController(ILiberarCreditoService service)
         {
             _service = service;
         }

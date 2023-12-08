@@ -8,7 +8,8 @@ namespace Service
     {
         public static void ConfigureService(this IServiceCollection services)
         {
-            services.AddScoped<ICreditoService, CreditoService>();
+            services.AddScoped<ILiberarCreditoService, LiberarCreditoService>();
+            services.AddScoped<ISalvarCreditoService, SalvarCreditoService>();
         }
     }
 }

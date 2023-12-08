@@ -6,7 +6,7 @@ namespace Domain.Models
     public class CreditoPessoaJuridica : CreditoAbstract
     {
         protected override int Taxa => 5;
-        public CreditoPessoaJuridica(decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento) : base(eTipoCredito.PessoaJuridica, valorCredito, quantidadeParcelas, dataPrimeiroVencimento)
+        public CreditoPessoaJuridica(string cpf, string nome, string celular, string uf, decimal valorCredito, int quantidadeParcelas, DateTime dataPrimeiroVencimento) : base(cpf, nome, celular, uf, eTipoCredito.PessoaJuridica, valorCredito, quantidadeParcelas, dataPrimeiroVencimento)
         {
         }
 

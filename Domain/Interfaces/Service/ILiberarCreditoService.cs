@@ -2,7 +2,7 @@
 
 namespace Domain.Interfaces.Service
 {
-    public interface ICreditoService
+    public interface ILiberarCreditoService
     {
         public Task<CreditoAprovado> LiberarCredito(PropostaCredito propostaCredito);
     }
