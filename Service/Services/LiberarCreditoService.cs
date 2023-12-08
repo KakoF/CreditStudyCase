@@ -14,7 +14,7 @@ namespace Service.Services
             _salvarCreditoService = salvarCreditoService;
 
         }
-        public async Task<CreditoAprovado> LiberarCredito(PropostaCredito propostaCredito)
+        public async Task<CreditoAprovado> LiberarCreditoAsync(PropostaCredito propostaCredito)
         {
             var credito = _factory.Factory(propostaCredito);
             credito.ViabilizarLiberacao();

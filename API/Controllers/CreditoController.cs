@@ -17,7 +17,7 @@ namespace API.Controllers
         [Route("Liberar")]
         public async Task<CreditoAprovado> Liberar([FromBody] PropostaCredito credito)
         {
-            return await _service.LiberarCredito(credito);
+            return await _service.LiberarCreditoAsync(credito);
         }
     }
 }
