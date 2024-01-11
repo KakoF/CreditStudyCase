@@ -16,7 +16,7 @@ namespace Service.Services
         }
         public async Task<CreditoAprovado> LiberarCreditoAsync(PropostaCredito propostaCredito)
         {
-            var credito = _factory.Factory(propostaCredito);
+            var credito = _factory.Create(propostaCredito);
             credito.ViabilizarLiberacao();
             var calculo = credito.CalcularCredito();
             await _salvarCreditoService.SalvarAsync(credito);
